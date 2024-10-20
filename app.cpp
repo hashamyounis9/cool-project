@@ -7,6 +7,6 @@ int main()
   cin >> n1 >> n2;
 
   int sum = n1 + n2;
-  std::cout << "Sum is: " << sum << std::endl;
+  cout << "Sum is: " << sum <<endl;
   return 0; 
 }
