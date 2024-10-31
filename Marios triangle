@@ -1,0 +1,30 @@
+#include <stdio.h>
+int main()
+{
+    int y = 3;
+    int n = 4;
+    int x = 1;
+    for (int i = x; i <= n; i++)
+    {
+        for (int j = n; j > i; j--)
+        {
+            printf(" ");
+        }
+        for (int k = x; k <= i; k++)
+        {
+            printf("#");
+        }
+         for (int  l = 1; l < 3; l++)
+        {
+          for (int m = 1; m < 3; m++)
+          {
+            printf(" ");
+          }
+        }
+        for (int k = x; k <= i; k++)
+        {
+            printf("#");
+        }
+        printf("\n");
+    }
+}
