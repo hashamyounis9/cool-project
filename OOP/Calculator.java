@@ -9,25 +9,40 @@ public class Calculator {
         this.num2 = num2;
     }
 
-    public void addition() {
-        System.out.println(num1 + " + " + num2 + " = " + (num1 + num2));
+    public int addition() {
+        return num1 + num2;
     }
 
-    public void subtraction() {
-        System.out.println(num1 + " - " + num2 + " = " + (num1 - num2));
+    public int subtraction() {
+        return num1 - num2;
     }
 
-    public void multiplication() {
-        System.out.println(num1 + " X " + num2 + " = " + (num1 * num2));
+    public int multiplication() {
+        return num1 * num2;
     }
 
-    public void division() {
-        System.out.println(num1 + " / " + num2 + " = " + (num1 / num2));
+    public int division() {
+        return num1 / num2;
     }
 
     public void displayNumbers() {
         System.out.println("The first number is: " + num1);
         System.out.println("The second number is: " + num2);
+    }
+
+    // A static function for performing calculation by passing parameters
+    public static int performCalculation(int num1, int num2, char op) {
+        if (op == '+') {
+            return num1 + num2;
+        } else if (op == '-') {
+            return num1 - num2;
+        } else if (op == '*') {
+            return num1 * num2;
+        } else if (op == '/') {
+            return num1 / num2;
+        } else {
+            return -1;
+        }
     }
 
     public int getNum1() {
@@ -46,12 +61,4 @@ public class Calculator {
         this.num2 = num2;
     }
 
-    public static void main(String[] args) {
-        Calculator c1 = new Calculator(10,20);
-        c1.displayNumbers();
-        c1.addition();
-        c1.subtraction();
-        c1.multiplication();
-        c1.division();
-    }
 }
